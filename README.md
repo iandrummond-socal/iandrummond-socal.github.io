@@ -9,6 +9,7 @@ A single-page, static website for Ian Drummond and Park Ave Projects, LLC. The c
 - `assets/ian-drummond.webp`: optimized portrait.
 - `assets/signature.svg`: supplied vector signature, with its view box cropped to the artwork.
 - `assets/favicon.svg`: custom architectural monogram.
+- `assets/social-preview-v1.jpg`: 1200 × 630 branded social-sharing image.
 - `.nojekyll`: included for static hosting.
 
 ## Preview locally
@@ -23,7 +24,7 @@ In the repository, open **Settings → Pages**. Under **Build and deployment**, 
 
 Use the live URL displayed in the Pages settings after deployment. All site assets use relative paths, so the same package supports a repository subpath or a domain root.
 
-No domain configuration or `CNAME` file is included. The business email domain has not been assumed to be the website’s confirmed hosting domain.
+The live repository includes a `CNAME` file for `parkaveprojects.com`. Preserve this file when updating the site.
 
 ## Edit the site
 
@@ -31,7 +32,7 @@ No domain configuration or `CNAME` file is included. The business email domain h
 - **Colors and typography:** edit the CSS variables at the beginning of the inline stylesheet.
 - **Portrait:** replace `assets/ian-drummond.webp`, preserving its filename or updating the image path and dimensions.
 - **Signature:** replace `assets/signature.svg`.
-- **Social sharing:** after confirming your production URL, add an absolute `og:image` URL and a canonical URL to the page head.
+- **Social sharing:** Open Graph and X card tags point to `https://parkaveprojects.com/assets/social-preview-v1.jpg`, and the canonical URL is `https://parkaveprojects.com/`. If replacing the preview image, use a new filename and update both sets of image tags.
 
 ## Typography
 
