@@ -1,0 +1,5 @@
+# /etc/udev/rules.d/99-dp-lock-hbr3.rules
+# Re-apply the Studio Display link lock on every DRM hotplug. udev sends
+# several change events per plug, so the service starts ~3 times; harmless.
+# --no-block keeps udev from waiting on the script's 30 s retry loop.
+ACTION=="change", SUBSYSTEM=="drm", ENV{HOTPLUG}=="1", RUN+="/usr/bin/systemctl --no-block start dp-lock-hbr3.service"

@@ -1,0 +1,15 @@
+# /etc/systemd/system/dp-lock-hbr3.service
+# Pins the Apple Studio Display's DP link to 4 lanes @ HBR3.
+# Enabled at boot; also started by 99-dp-lock-hbr3.rules on DRM hotplug.
+[Unit]
+Description=Lock Apple Studio Display DisplayPort link to 4 lanes @ HBR3
+After=sys-kernel-debug.mount systemd-udevd.service
+Wants=sys-kernel-debug.mount
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/dp-lock-hbr3.sh
+TimeoutStartSec=60
+
+[Install]
+WantedBy=graphical.target
