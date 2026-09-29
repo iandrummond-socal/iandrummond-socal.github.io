@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Copy this file to Config.plist (gitignored) and fill in the values. -->
+
+	<!-- App key from https://www.dropbox.com/developers/apps -->
+	<key>DropboxAppKey</key>
+	<string>YOUR_DROPBOX_APP_KEY</string>
+
+	<!-- "appFolder": the app was created with "App folder" access (recommended).
+	     "fullDropbox": the app has full Dropbox access; notes default to /Apps/Notation. -->
+	<key>DropboxAccessType</key>
+	<string>appFolder</string>
+
+	<!-- Optional. Overrides the default folder. Leave empty to use the default:
+	     "" (the app folder itself) for appFolder, "/Apps/Notation" for fullDropbox. -->
+	<key>DropboxFolderPath</key>
+	<string></string>
+</dict>
+</plist>

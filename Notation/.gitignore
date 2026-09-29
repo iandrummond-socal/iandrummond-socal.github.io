@@ -1,0 +1,11 @@
+# Dropbox credentials: copy Config.example.plist to Config.plist
+Config.plist
+
+# Xcode
+build/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+.swiftpm/
+.build/
+.DS_Store
