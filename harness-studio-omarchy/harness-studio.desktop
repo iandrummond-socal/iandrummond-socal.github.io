@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Harness Studio
+Comment=Any-model agent for your code and UI
+Exec="/opt/Harness Studio/harness-studio" --ozone-platform-hint=auto --enable-features=WaylandWindowDecorations %U
+Terminal=false
+Type=Application
+Icon=harness-studio
+StartupWMClass=harness-studio
+MimeType=x-scheme-handler/harness-studio;
+Categories=Development;

@@ -1,0 +1,17 @@
+post_install() {
+  # Same check as the upstream deb: fall back to a setuid chrome-sandbox only without user namespaces.
+  if ! { [ -L /proc/self/ns/user ] && unshare --user true; } 2>/dev/null; then
+    chmod 4755 '/opt/Harness Studio/chrome-sandbox' || true
+  fi
+  command -v update-desktop-database >/dev/null && update-desktop-database -q /usr/share/applications || true
+  command -v gtk-update-icon-cache >/dev/null && gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor || true
+}
+
+post_upgrade() {
+  post_install
+}
+
+post_remove() {
+  command -v update-desktop-database >/dev/null && update-desktop-database -q /usr/share/applications || true
+  command -v gtk-update-icon-cache >/dev/null && gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor || true
+}
